@@ -8,10 +8,10 @@
   <script src="tooling/smpte.js"></script>
   <link rel="stylesheet" href="tooling/smpte.css" />
   <meta itemprop="pubType" content="AG" />
-  <meta itemprop="pubNumber" content="25" />
+  <meta itemprop="pubNumber" content="06-1" />
   <meta itemprop="pubState" content="published" />
-  <meta itemprop="pubDateTime" content="2022-07-05" />
-  <title>Use of JSON in Engineering Documents</title>
+  <meta itemprop="pubDateTime" content="2021-05-26" />
+  <title>New Project Form Instructions</title>
 </head>
 
 <body>
@@ -20,312 +20,207 @@
 
   <section id="sec-toc" class="unnumbered"></section>
 
-  <section id="sec-scope">
-    <h2>Scope</h2>
-    <p>This Administrative Guideline specifies selected uses of the JavaScript Object Notation (JSON) in SMPTE
-      Engineering Documents.</p>
+  <section id="sec-purpose">
+    <h2>Purpose</h2>
+    <p>This Administrative Guideline provides instructions for completing a New Project Form, <a href="#bib-smpte-ag-06-1"></a>.</p>
+    <p class="note"><a href="#bib-smpte-ag-06-1"></a> New Project Forms, once approved, will be added to the collection of other approved AG forms posted to a location specified by the SMPTE Director of Standards Development.</p>
+    <p class="note">No projects may be created without filling in a copy of <a href="#bib-smpte-ag-06-1"></a>. This document is intended to help collect information so that a Technology Committee Chair may start the New Project Process detailed in the <a href="#bib-smpte-standards-operation-manual-v31"></a></p>
+
   </section>
 
   <section id="sec-conformance"></section>
 
   <section id="sec-normative-references">
     <ul>
-      <li><cite id="bib-ietf-rfc-3986">IETF RFC 3986</cite>, Uniform Resource
-      Identifiers (URI): Generic Syntax, T. Berners-Lee, et al., January 2005. <a>http://www.ietf.org/rfc/rfc3986.txt</a></li>
-      <li><cite id="bib-ietf-rfc-5234">IETF RFC 5234</cite>, “Augmented BNF for
-      Syntax Specifications: ABNF”, D. Crocker, January 2008. <a>https://www.rfc-editor.org/rfc/rfc5234.txt</a></li>
-      <li><cite id="bib-ietf-rfc-7405">IETF RFC 7405</cite>, “Case-Sensitive
-      String Support in ABNF”, P. Kyzivat, December 2014. <a>https://datatracker.ietf.org/doc/html/rfc7405.txt</a></li>
-      <li><cite id="bib-ietf-rfc-8259">IETF RFC 8259</cite>, The JavaScript
-      Object Notation (JSON) Data Interchange Format, T. Bray, <a>http://www.ietf.org/rfc/rfc8259.txt</a></li>
+      <li><cite id="bib-smpte-standards-operation-manual-v31">SMPTE Standards Operation Manual v3.1</cite>
+      <a>https://f.hubspotusercontent00.net/hubfs/5253154/SMPTE%20Standards%20OM%20v3.1.pdf</a></li>
+      <li><cite id="bib-smpte-ag-02">SMPTE AG-02</cite>
+      <a>https://smpte.github.io/ag-02/</a></li>
+      <li><cite id="bib-smpte-ag-06-1">SMPTE AG-06-2</cite>
+      <a>https://f.hubspotusercontent00.net/hubfs/5253154/AG-06-2-New-Project%20Form-2021.docx</a></li>
+      <li><cite id="bib-smpte-ag-22">SMPTE AG-22</cite>
+      <a>https://smpte.github.io/ag-22/</a></li>
     </ul>
   </section>
 
-  <section id="sec-smpte-json-structures">
-    <h2>SMPTE JSON structures</h2>
-    <section id="sec-overview">
-      <h3>Overview (informative)</h3> 
-      The JSON Schema resource applicable to a JSON structure can specify constraints to which the structure is expected to conform.
-    </section>
-    
-    <section id="sec-json-structures">
-      <h3>JSON Structures</h3>
-      
-      <p>
-        A <dfn>SMPTE JSON structure</dfn> is any data structure that (a) is specified by an
-        Engineering Document and (b) conforms to <a
-        href="#bib-ietf-rfc-8259"></a> (i.e., a JSON document), whether within
-        the prose or as an Additional Element.
-      </p>
-      
-      <p>
-        The structure of each <a>SMPTE JSON structure</a> shall be normatively specified
-        the Engineering Document.
-      </p>
-      <p>
-        Each SMPTE JSON structure should be informatively specified by a JSON Schema
-        resource, which may be a SMPTE JSON Schema resource (see section 5), using
-        the JSON Schema language as specified in <a href="#bib-draft-bhutton-json-schema-00"></a>.
-      </p>
-    </section>
-    
-  </section>
+  <section id="sec-instructions-for-project-details">
+    <h2>Instructions for Project Details</h2>
 
-<section id="sec-smpte-json-schema-resources">
-  <h2>SMPTE JSON Schema resources</h2>
-  
-  <section id="sec-introduction">
-    <h3>Introduction (informative)</h3>
-    
-    <p>Using the formal language of JSON Schema, descriptions of conformance
-    requirements for JSON structures can avoid some of the ambiguity inherent with
-    using English prose alone, while allowing the use of existing commercial tools
-    to facilitate testing and validation. It can also represent a significant
-    convenience to implementers, for example by supporting the ability to
-    automatically validate structures.</p>
-    
-    <p>Sample relative link to a <a href="sample.png">picture</a>.</p>
-
-  </section>
-  
-  <section id="sec-canonical-uri">
-    <h3>Canonical URI</h3>
-    
-    <section id="sec-id-keyword">
-      <h4><code>$id</code> Keyword</h4>
-      
-      <p>A SMPTE JSON Schema resource shall use the <code>$id</code> keyword in the root schema
-      object, thereby providing the canonical URI for the JSON root schema.</p>
-    </section>
-    
-    <section id="sec-canonical-uri-syntax">
-      <h4>Canonical URI Syntax</h4>
-      
-      The canonical URI shall conform to the <code>SCHEMAID</code> syntax below,
-      specified using <a href="#bib-ietf-rfc-5234"></a> and <a
-      href="#bib-ietf-rfc-7405"></a> and conforming to <a
-      href="#bib-ietf-rfc-3986"></a>.
-      
+    <section id="sec-title-table-1">
+      <h3>Title (Table 1)</h3>
+      <p>The title of your project should be short and descriptive title starting with the TC parent group. This appears on all project lists.</p>
+      <p class="note">As soon as you have chosen your title, replace the text “AG-06 New Project Form” with that title and save this file with a filename of the form:</p>
 <pre>
-SCHEMAID = %s"https://www.smpte-ra.org/json-schema/" PUBNUM "/" REVISION [ "/" SHORTNAME]
-SHORTNAME = 1*4("/" 1*(ALPHA / DIGIT / "-" / "_" / ".") )
-PUBNUM = 1*(DIGIT) ["-" 1*(DIGIT)]
-REVISION = STABLEREV
-STABLEREV = 4(DIGIT) [2(DIGIT)]
+&lt;TC>[-&lt;update&gt;]-&lt;type&gt;[-&lt;number&gt;][-&lt;part&gt;][&lt;element&gt;]-&lt;description&gt;[(&lt;note&gt;)]
 </pre>
-      
-      <p><code>PUBNUM</code> shall represent the official publication number of the
-      Engineering Document, without leading zeroes and including a part number, if
-      any, separated by a hyphen, e.g., 456-1.</p>
-      
-      <p class="note">The <code>REVISION</code> component of a stable SMPTE JSON
-      Schema canonical URI does not necessarily correspond to the publication
-      date of its defining Engineering Document. For instance, the defining
-      Engineering Document can be revised in such a way that the contents of the
-      JSON Schema remain unchanged.</p>
-      
-      <p class="note">
-        No changes to SMPTE JSON Schema canonical URI are necessary following a Draft
-        Publication ballot since SMPTE JSON Schema canonical URI are constructed
-        independently of the publication date of the Engineering Document.
-      </p>
+      <p>which is similar to the work-in-progress document naming convention (<a href="#bib-smpte-ag-02"></a> § 8.1). Where:</p>
+      <dl>
+        <dt>&lt;TC&gt;</dt>
+        <dd>
+          is the Group that authored the document e.g. <strong>31FS</strong>
+        </dd>
+        <dt>&lt;type&gt;</dt>
+        <dd>
+          is the output document type <strong>ST | RP | EG | RDD | AN | ER | OV | AG</strong>
+        </dd>
+        <dt>&lt;number&gt;</dt>
+        <dd>
+          is the optional SMPTE HQ staff-assigned document number
+        </dd>
+        <dt>&lt;part&gt;</dt>
+        <dd>
+          is the optional part number
+        </dd>
+        <dt>&lt;element&gt;</dt>
+        <dd>
+          is the optional element letter
+        </dd>
+        <dt>&lt;update&gt;</dt>
+        <dd>
+          is the word <strong>Revision</strong> or <strong>Amendment</strong> or is absent
+        </dd>
+        <dt>&lt;description&gt;</dt>
+        <dd>
+          is a brief indicator of subject, such as an abbreviated name of the project, constructed using only alpha characters, digits, space (“ “) and "-"•
+        </dd>
+        <dt>&lt;note&gt;</dt>
+        <dd>
+          is an optional string that can be used to annotate the project, e.g. <strong>coordination</strong>. The &lt;note&gt; shall be constructed using only alpha characters, digits, “-“
+        </dd>
+      </dl>
+      <ul>
+        <li>Required but unknown fields should be replaced with XX until known</li>
+        <li>Optional but unknown fields should be omitted until known</li>
+      </ul>
+      <p>EXAMPLE: 21DC-ER-Perpetual Motion Picture Generator</p>
+      <p>EXAMPLE: 31FS-RDD-97-MXF Custom Metadata Mapping For Space Craft</p>
+      <p>EXAMPLE: 35PM-Revision-ST-2067-2-Core Constraints 2022 update(from-Github-issues)/p>
+      <p>EXAMPLE: XX-ST-My New Project of Unknown TC</p>
+
     </section>
-    
-    <section id="sec-examples">
-      <h4>Examples (informative)</h4>
-      The following is an example SMPTE JSON Schema resource canonical URI:
-      
-      <pre>https://www.smpte-ra.org/json-schema/456/2021/foo</pre>
-      
-      <p><a href="#table-examples"></a> lists examples.</p>
 
-      <table id="table-examples">
-        <caption>Examples</caption>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>URI</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Hello</td>
-            <td>https://www.smpte-ra.org/json-schema/456/2021/foo</td>
-          </tr>
-        </tbody>
-      </table>
+    <section id="sec-proponents-table-2">
+      <h3>Proponents (Table 2)</h3>
+      <p>The <a href="#bib-smpte-standards-operation-manual-v31"></a> §6.3 requires <em>one or more Proponents, who are SMPTE Standards Members agreeing to be actively involved in the Project</em>. Proponents are individuals and not organizations. The first listed proponent will become the publicly visible main contact for the project. The proponent’s field is not publicly visible but can be seen by Standards Community members. Please extend the table as needed.</p>
+
     </section>
-    
-    <section id="sec-registration">
-      <h4>Registration (informative)</h4>
-      
-      <p>
-        The SMPTE JSON Schema resource canonical URI syntax ensures uniqueness across
-        Engineering Documents, and thus no specific registration steps are required.
-      </p>
 
-      <p><a href="#figure-process-flowchart"></a> shows an example of the process.</p>
+    <section id="sec-details-tables-3-and-4">
+      <h3>Details (Tables 3 and 4)</h3>
 
-      <figure id="figure-process-flowchart">
-        <figcaption>Example of the Process</figcaption>
-        <img class="figure" src="sample.png">
-      </figure>
-      
-    </section>
-  </section>
-  
-  <section id="sec-using-a-smpte-json-schema-resource">
-    <h3>Using a SMPTE JSON Schema Resource</h3>
-    
-    <p>A SMPTE JSON Schema resource can be used informatively by an Engineering
-    Document, either by inclusion or by reference.</p>
-    
-    <p class="note">The current specification of JSON Schema, though well-supported, is not a
-    normatively referenceable document per the Standards Operations Manual (section
-    10 Normative References) and AG-03. Thus, provision of SMPTE JSON Schema
-    resources, at this time, is strictly informative.</p>
-  </section>
-    
-  <section id="sec-version">
-    <h3>Version</h3>
-    
-    <p>
-      Whenever a SMPTE JSON Schema resource is provided, the Engineering Document
-      shall provide an informative reference to the JSON Schema language specification
-      to which it conforms (e.g., JSON Schema, as shown in the Bibliography).
-    </p>
-    
-    <p>
-      A SMPTE JSON Schema resource shall use the <code>$schema</code> keyword in the root schema
-      object.
-    </p>
-    
-    <p class="note">
-      the <code>$schema</code> keyword is both used as JSON Schema dialect identifier and
-      as the identifier of a resource which is itself a JSON Schema resource to
-      evaluate conformance to that dialect.
-    </p>
-    
-    <p class="note">
-      JSON Schema resources can comprise subschemas, where portions of a root
-      schema document are separately identifiable by a URI-reference that are not
-      absolute and/or contain non-empty fragments.  For example,
-      <code>https://smpte-ra.org/schemas/2120-2/2021/smpte-tlx-items/definitions/rationalType</code>
-      is a reference to a subschema within the SMPTE JSON Schema resource
-      <code>https://smpte-ra.org/schemas/2120-2/2021/smpte-tlx-items</code>
-      where the subschema represents the constraints for a JSON structure
-      representing a rational value.
-    </p>
-    
-  </section>
-  
-  <section id="sec-keyword-order">
-    <h3>Keyword Order</h3>
-    
-    <p>The following keywords should appear as the first keywords in any SMPTE JSON Schema resource in this order:</p>
-    
-    <ul>
-      <li><code>$schema,</code> as specified in <a href="#sec-version"></a></li>
-      <li><code>$id,</code> as specified in <a href="#sec-id-keyword"></a>; and,</li>
-      <li><code>$comment,</code> as specified in <a
-      href="#sec-cc-license-schema-resources"></a>.</li>
-    </ul>
-
-  </section>
-</section>
-
-<section id="sec-copyright-and-license">
-  <h2>Copyright and License</h2>
-  
-  <section id="sec-license">
-    <h3>License</h3>
-    
-    <p>
-      Any SMPTE JSON structure or SMPTE JSON Schema resource, whether provided within
-      the prose or as an Additional Element of an Engineering Document, shall be
-      licensed according to <a href="#sec-json-document-license"></a>.
-    </p>
-    
-    <p class="note">
-      The license portion of Annex A is verbatim the BSD-3-Clause license
-      available at <a>https://spdx.org/licenses/BSD-3-Clause.html</a>.
-    </p>
-  </section>
-  
-  <section id="sec-cc-license-schema-resources">
-    <h3>Copyright and License in SMPTE JSON Schema resources</h3>
-    
-    Any SMPTE JSON Schema resource shall include the copyright and license
-    provided in <a href="#sec-json-document-license"></a> in the form of the
-    <code>$comment</code> element specified in <a href="#sec-license-element"></a>.
-  </section>
-</section>
-
-<section class="annex" id="sec-json-document-license">
-  <h2>JSON Document License</h2>
-
-  <section id="sec-copyright-element">
-    <h3>Copyright Element</h3>
+      <section id="sec-notes-for-table-3">
+        <h4>Notes for Table 3</h4>
+        <dl>
+          <dt><strong>Chair</strong></dt>
+          <dd>
+             <p>Just the name of the person who will be the main contact for the project. No email address – it will be on a public website. Usually the first listed proponent.</p>
+          </dd>
+          <dt><strong>Description</strong></dt>
+          <dd>
+             <p>A short description of the project’s purpose and objectives. This text is aimed at the public who will read it and thus should be able to understand the Project in general terms. There may be extra requirements for this field for the Public CD Process (<a href="#bib-smpte-ag-22"></a>)</p>
+          </dd>
+          <dt><strong>Problem to be solved</strong></dt>
+          <dd>
+             <p>A short statement about the problem to be solved. Ideally phrased in terms of requirements such that when those requirements are met, the document is complete. There may be extra requirements for this field for the Public CD Process (<a href="#bib-smpte-ag-22"></a>)</p>
+          </dd>
+          <dt><strong>Project scope</strong></dt>
+          <dd>
+             <p>A short description of the scope of work that will be done and optionally elements that are out of scope. A narrow scope often results in a faster, more controlled project lifecycle. An example would be <em>“Revision of standard ST xxx to roll-up amendment ST-xxx-Amd-1 and to update the normative references”</em>. This limited scope is intended to restrict the work to just the details in the scope without opening the document up for redesign.</p>
+          </dd>
+          <dt><strong>Specific Tasks</strong></dt>
+          <dd>
+             <p>A high-level list of tasks that need to be completed as the work progresses. Consider test materials, sample bitstreams, sample software, data schemas, validation criteria, problem decomposition, liaisons with other organizations etc.</p>
+          </dd>
+          <dt><strong>Type of Output</strong></dt>
+          <dd>
+             <p>Check one or more boxes where:</p>
 <pre>
-Copyright (c), Society of Motion Pictures and Television Engineers. 
-
-Redistribution and use in source and binary forms, with or without modification,
-are permitted provided that the following conditions are met: 
+ST – Standard               RP  – Recommended Practice             Rev –Revision
+EG – Engineering Guideline  AMD – Amendment                       
+ER – Engineering Report     RDD – Registered Disclosure Document
 </pre>
-<p><a href="#table-copyright-forms"></a> lists copyright forms.</p>
-<table id="table-copyright-forms">
-  <caption>Copyright Forms</caption>
-  <thead>
-    <tr>
-      <th>Name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>(c)</td>
-    </tr>
-    <tr>
-      <td>©</td>
-    </tr>
-  </tbody>
-</table>
-  </section>
+          </dd>
+          <dt><strong>Public CD</strong></dt>
+          <dd>
+             <p>Please indicate if you intend to use the <a href="#bib-smpte-ag-22"></a> process. This decision can be changed at any time.</p>
+          </dd>
+          <dt><strong>Editor</strong></dt>
+          <dd>
+             <p>Member of the Standards Community who will edit the document.</p>
+          </dd>
+          <dt><strong>Dates</strong></dt>
+          <dd>
+             <p>Estimation of the start and end dates of the project. Consult with TC Chair or SVP or Engineering Director for help.</p>
+          </dd>
+          <dt><strong>Known References</strong></dt>
+          <dd>
+             <p> Complete this section if there are known documents or bodies of work critical to the project e.g. SMPTE mapping of an ITU or ISO/IEC standard.</p>
+          </dd>
+          <dt><strong>External Liaisons</strong></dt>
+          <dd>
+             <p>Known entities to be informed that the project has started. The Group should draft the liaison letter for the SVP and submit via the TC chairs.</p>
+          </dd>
+          <dt><strong>Additional Liaisons</strong></dt>
+          <dd>
+             <p>Additional Liaisons not in the list above.</p>
+          </dd>
+          <dt><strong>TC Liaisons</strong></dt>
+          <dd>
+             <p>Check the TCs with which documents should be shared or communications maintained.</p>
+          </dd>
+        </dl>
+      </section>
 
-  <section id="sec-license-element">
-    <h3>License Element</h3>
-
-  <p>The following example JSON Schema incorporates the above element in
-  accordance with <a href="#sec-cc-license-schema-resources"></a>, with the initial
-  keyword order recommended in <a href="#sec-keyword-order"></a>.</p>
-
+      <section id="sec-notes-for-table-4">
+        <h4>Notes for Table 4</h4>
+        <dl>
+          <dt><strong>Project Group Name</strong> and <strong>Existing Group</strong> question</dt>
+          <dd>
+             <p>The submitter may make a request here for a new or existing Project Group to support the Project. It may be modified if the SVP decides that the work should go elsewhere. If the Group already exists, enter its name exactly as shown in Teams. If a new Group is required, enter the proposed name and fill out the fields below for the new group to be set up. Individual – for projects with only a single person doing the work and therefore needing no Teams resources.</p>
+          </dd>
+          <dt><strong>Project Type</strong></dt>
+          <dd>
+             <p>Check one of these boxes where:</p>
 <pre>
-{
-  "$schema": "https://json-schema.org/draft/2020-12/meta/core",
-  "$id": "https://smpte-ra.org/json-schema/2199-1/2022/foo",
-  "$comment": "Copyright (c), Society of Motion Pictures and Television Engineers. Licensed under BSD-3-Clause (https://spdx.org/licenses/BSD-3-Clause.html).",
-  "title": "foo",
-  "type": "object",
-  "description": "This is an example schema for a fictitious foo object.",
-  "examples": [
-    {
-      "bar": "zyzx"
-    }
-}  
+WG – Working Group typically for larger projects with several subgroups doing drafting
+DG – Drafting Group for drafting an individual document
+SG – Study Group to create an Engineering Report (internal to SMPTE or for publication)
+TF – Task Force for study groups involving multiple TCs or active participation by 
+     external organizations
 </pre>
+          </dd>
+          <dt><strong>Parent TC</strong></dt>
+          <dd>
+             <p>The TC this project reports to. The applicant can make a request or leave blank; final assignment made by SVP</p>
+          </dd>
+          <dt><strong>Group Chair</strong></dt>
+          <dd>
+             <p>Name of the individual who will Chair Group meetings.</p>
+          </dd>
+          <dt><strong>Group Secretary</strong> [optional]</dt>
+          <dd>
+             <p>Member of the Standards Community to perform secretarial tasks.</p>
+          </dd>
+        </dl>
+      </section>
+
+      <section id="sec-notes-for-table-5">
+        <h4>Notes for Table 5</h4>
+        <dl>
+          <dt><strong>Approval date</strong></dt>
+          <dd>
+             <p>The end of the ST and TC approval period.</p>
+          </dd>
+          <dt><strong>Revisions notes and dates</strong></dt>
+          <dd>
+             <p>Occasionally, during the lifetime of a project, the Group decides that project details such as the Scope need to be changed. The actual change should be applied in Table 3 but a brief note and date of TC approval should be added to Table 5.</p>
+          </dd>
+        </dl>
+      </section>
+
+    </section>
 
   </section>
-</section>
-
-<section id="sec-bibliographic-references">
-  <ul>
-    <li><cite id="bib-draft-bhutton-json-schema-00">IETF
-    draft-bhutton-json-schema-00</cite>, Wright, A., H. Andrews; B. Hutton, G.
-    Dennis, "JSON Schema: A Media Type for Describing JSON Documents", Work in
-    Progress, December 8, 2020.
-    <a>https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-00</a>
-    </li>
-  </ul>
-</section>
 
 </body>
 
