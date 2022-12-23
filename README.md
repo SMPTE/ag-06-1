@@ -1,10 +1,9 @@
-# SMPTE _AG-06-1_ - _New Project Form Instructions_
+# SMPTE _AG-06_ - _New Project Form Instructions_
 
 _This repository is *public*._
 
-Rendered at [https://smpte.github.io/ag-06-1/](https://smpte.github.io/ag-06-1/).
+* [Latest version](https://doc.smpte-doc.org/ag-06/main/)
+* [Redline against the latest edition](https://doc.smpte-doc.org/ag-06/main/pub-rl.html)
 
 Please consult [CONTRIBUTING.md](./CONTRIBUTING.md), [CONFIDENTIALITY.md](./CONFIDENTIALITY.md), [LICENSE.md](./LICENSE.md) and
 [PATENTS.md](./PATENTS.md) for important notices.
-
-Your feedback is welcome at <https://github.com/SMPTE/ag-06-1/issues>.
